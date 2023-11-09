@@ -87,10 +87,14 @@ function updateMap(selectedValue)
       .style("fill", "#3498DB")
       .attr("stroke", "#1C2833")
       .attr("stroke-width", 1)
-      .attr("fill-opacity", function(d) { return opacityScale(d.Population); })
+      .attr("fill-opacity", 0) 
       .on("mouseover", mouseover)
       .on("mousemove", mousemove)
-      .on("mouseleave", mouseleave);
+      .on("mouseleave", mouseleave)
+      .transition() // Apply the transition
+      .duration(1000) // Animation duration in milliseconds
+      .attr("r", function(d) { return radiusScale(d.Population); })
+      .attr("fill-opacity", function(d) { return opacityScale(d.Population); });
 
     // Add town names
     labelGroup
@@ -106,6 +110,20 @@ function updateMap(selectedValue)
       .attr("fill", "white");
 }
 
+function loadNewTowns() 
+{
+  // Fetch new towns data (modify the URL as needed)
+  d3.json("http://34.38.72.236/Circles/Towns/100", function(error, newTowns) 
+  {
+    if (error) throw error;
+      // Update townsData with the new data
+      townsData = newTowns;
+      // Get the current slider value
+      var currentSliderValue = parseInt(document.getElementById("townsSlider").value);
+      // Update the map with the new data and the current slider value
+      updateMap(currentSliderValue);
+  });
+}
 // Load UK map
 d3.json('https://yamu.pro/gb.json', function(error, data) 
 {
@@ -119,7 +137,7 @@ d3.json('https://yamu.pro/gb.json', function(error, data)
       .text("Great Britain");
 
     // Load towns data
-    d3.json("http://34.38.72.236/Circles/Towns/100", function(error, towns) 
+    d3.json("http://34.38.72.236/Circles/Towns/500", function(error, towns) 
     {
         townsData = towns; // Store the town data
 
@@ -165,3 +183,5 @@ d3.json('https://yamu.pro/gb.json', function(error, data)
     });
 });
   document.getElementById("refresh-button").addEventListener("click", refreshPage);
+  document.getElementById("load-towns-button").addEventListener("click", loadNewTowns);
+

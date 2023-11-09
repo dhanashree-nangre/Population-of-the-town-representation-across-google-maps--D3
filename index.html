@@ -11,10 +11,12 @@
 <body>
   <!--  Button to switch between google maps view and regular map view -->
   <button id="googlemap-button" onclick="goToGooglemappage()">See projection on google maps</button>
+  <!--  Button to load new set of towns -->
+  <button id="load-towns-button">Load New Towns</button>
   <!-- We can use this slider to show desired number of towns on screen-->
   <div class="slider-container">
     <label for="townsSlider">Number of Towns: <span id="townsValue">50</span></label>
-    <input type="range" min="1" max="100" value="50" class="slider" id="townsSlider">
+    <input type="range" min="1" max="500" value="50" class="slider" id="townsSlider">
   </div>
   <!-- refresh button to load page-->
   <button id="refresh-button">Refresh Page</button>
