@@ -1,0 +1,24 @@
+
+<!DOCTYPE html>
+<!--This is main html file of to see map projection on screen.-->
+<html>
+<head>
+  <meta charset="utf-8">
+  <script src="https://d3js.org/d3.v4.js"></script>
+  <title>UK Towns Visualization</title>
+  <link rel="stylesheet" href="index_file.css">
+</head>
+<body>
+  <!--  Button to switch between google maps view and regular map view -->
+  <button id="googlemap-button" onclick="goToGooglemappage()">See projection on google maps</button>
+  <!-- We can use this slider to show desired number of towns on screen-->
+  <div class="slider-container">
+    <label for="townsSlider">Number of Towns: <span id="townsValue">50</span></label>
+    <input type="range" min="1" max="100" value="50" class="slider" id="townsSlider">
+  </div>
+  <!-- refresh button to load page-->
+  <button id="refresh-button">Refresh Page</button>
+  <div id="map"></div>
+  <script src="index_script.js"></script>
+</body>
+</html>
