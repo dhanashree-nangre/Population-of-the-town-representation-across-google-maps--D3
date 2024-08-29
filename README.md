@@ -20,3 +20,5 @@ On the Google Maps page view, there are functionalities available.
   3. Town names are shown in black.
   4. There is a refresh button in the top right corner to reload the page.
   5. There is a button on the top left corner to open the page to another view of maps.
+
+     Screenshot 2023-11-09 at 10.46.21.png
