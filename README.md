@@ -21,4 +21,5 @@ On the Google Maps page view, there are functionalities available.
   4. There is a refresh button in the top right corner to reload the page.
   5. There is a button on the top left corner to open the page to another view of maps.
 
-     Screenshot 2023-11-09 at 10.46.21.png
+[     Screenshot 2023-11-09 at 10.46.21.png
+](https://github.com/dhanashree-nangre/D3_Assignment_2544403/blob/main/Screenshot%202023-11-09%20at%2010.45.51.png)
