@@ -23,3 +23,5 @@ On the Google Maps page view, there are functionalities available.
 
 ![     Screenshot 2023-11-09 at 10.46.21.png
 ](https://github.com/dhanashree-nangre/D3_Assignment_2544403/blob/main/Screenshot%202023-11-09%20at%2010.45.51.png)
+
+![Screenshot%202023-11-09%20at%2010.46.21.png](https://github.com/dhanashree-nangre/D3_Assignment_2544403/blob/main/Screenshot%202023-11-09%20at%2010.46.21.png)
